@@ -1,4 +1,4 @@
-worker_processes  2;
+worker_processes  <%= ENV['NGINX_WORKERS'] || 4 %>;
 error_log /dev/stdout info;
 
 daemon off;
@@ -18,7 +18,8 @@ http {
 		image/png png;
 	}
 	server {
-		listen ${{PORT}};
+		listen <%= ENV["PORT"] %>;
+
 
 		location /releases/ {
 			rewrite /releases/([^/]+)/([^/]+)-([^/]+)/force(\.exe)?$ /ForceCLI/force/releases/download/$1/force_$2_$3$4 break;
@@ -39,5 +40,7 @@ http {
 			error_page 301 302 307 = @handle_redirect;
 			recursive_error_pages on;
 		}
+
+		root /app/html;
 	}
 }
