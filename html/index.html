@@ -124,18 +124,18 @@
 						<div class="button-toolbar button-toolbar-centered flush-bottom download-buttons">
 
 							<div class="button button-primary inverse" id="button-download-osx">
-								<a href="/releases/v0.30.0/darwin-amd64/force" style="color:#0f0c18;">	Download for Mac OS X
+								<a href="/releases/v0.99.0/darwin-amd64/force.zip" style="color:#0f0c18;">	Download for Mac OS X
 								</a>
 							</div>
 
 							<div class="button button-primary inverse hide" id="button-download-windows">
-								<a href="/releases/v0.30.0/windows-amd64/force.exe" style="color:#58488a;">	Download for Windows
+								<a href="/releases/v0.99.0/windows-amd64/force.zip" style="color:#58488a;">	Download for Windows
 								</a>
 							</div>
 
 
 							<div class="button button-primary inverse hide" id="button-download-debian-ubuntu">
-								<a href="/releases/v0.30.0/linux-amd64/force" style="color:#58488a;">	Download for Debian/Ubuntu
+								<a href="/releases/v0.99.0/linux-amd64/force.zip" style="color:#58488a;">	Download for Debian/Ubuntu
 								</a>
 							</div>
 
@@ -233,23 +233,53 @@
 
 
 								<pre class="terminal-window-content"><span class="emphasis">$ force help</span>
+Usage:
+  force [command]
 
-Available commands:
-  login     Log in to force.com
-  logout    Log out from force.com
-  whoami    Show information about the active account
-  sobject   Manage sobjects
-  field     Manage sobject fields
-  record    Create, modify, or view records
-  export    Export metadata to a local directory
-  import    Import metadata from a local directory
-  query     Execute a SOQL query
-  apex      Execute anonymous Apex code
-  version   Display current version
-  update    Update to the latest version
-  help      Show this help
+Available Commands:
+  active       Show or set the active force.com account
+  apex         Execute anonymous Apex code
+  apiversion   Display/Set current API version
+  bigobject    Manage big objects
+  bulk         Load csv file or query data using Bulk API
+  completion   Generate the autocompletion script for the specified shell
+  create       Creates a new, empty Apex Class, Trigger, Visualforce page, or Component.
+  datapipe     Manage DataPipes
+  describe     Describe the object or list of available objects
+  eventlogfile List and fetch event log file
+  export       Export metadata to a local directory
+  fetch        Export specified artifact(s) to a local directory
+  field        Manage SObject fields
+  help         Help about any command
+  import       Import metadata from a local directory
+  limits       Display current limits
+  log          Fetch debug logs
+  login        Log into Salesforce and store a session token
+  logins       List force.com logins used
+  logout       Log out from Force.com
+  notify       Should notifications be used
+  oauth        Manage ConnectedApp credentials
+  open         Open a browser window, logged into an authenticated Salesforce org
+  package      Manage installed packages
+  password     See password status or reset password
+  push         Deploy metadata from a local directory
+  query        Execute a SOQL statement
+  quickdeploy  Quick deploy validation id
+  record       Create, modify, or view records
+  rest         Execute a REST request
+  security     Displays the OLS and FLS for a given SObject
+  sobject      Manage standard &amp; custom objects
+  test         Run apex tests
+  trace        Manage trace flags
+  usedxauth    Authenticate with SFDX Scratch Org User
+  version      Display current version
+  whoami       Show information about the active account
 
-Run 'force help [command]' for details.
+Flags:
+  -a, --account username   account username to use
+  -h, --help               help for force
+
+Use "force [command] --help" for more information about a command.
 								</pre>
 
 							</div>
